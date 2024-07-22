@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f2f2f2;
+}
+
+header {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    background-color: rgb(69, 68, 68);
+    z-index: 100;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    /* background-color: red; */
+    max-width: 1300px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar {
+    justify-content: space-between;
+}
+
+.navlinks {
+    gap: 20px;
+    list-style: none;
+}
+
+.navbar a {
+    display: inline-block;
+    padding: 20px 0;
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #c5c4c4;
+}
+
+.homepage {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: url(images/home-bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.homepage::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.homepage .content {
+    position: relative;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homepage .text {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.homepage .text h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.homepage a {
+    color: black;
+    text-decoration: none;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 6px;
+    padding: 5px 20px;
+    box-shadow: rgba(0, 0, 0, 0.8);
+    font-size: 20px;
+    transition: 0.4s;
+}
+
+.homepage a:hover {
+    color: white;
+    background-color: rgba(212, 212, 212, 0.2);
+}
+
+section {
+    padding-top: 80px;
+}
+
+.section-title {
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2rem;
+}
+
+section .cards {
+    display: flex;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+section .card {
+    width: calc(100% / 3 - 60px);
+    text-align: center;
+    list-style: none;
+    background-color: white;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 15px 10px 10px rgba(0, 0, 0, 0.07);
+    margin-bottom: 40px;
+}
+
+section .card img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+section .card p {
+    margin-top: 10px;
+}
+
+.portfolio .card {
+    padding: 0 0 20px;
+
+}
+
+.portfolio .card img {
+    height: 250px;
+    width: 100%;
+    border-radius: 10px 10px;
+}
+
+.about .company-info {
+    margin-top: 30px;
+}
+
+.about .row {
+    padding: 0 10px;
+}
+
+.about h3 {
+    margin: 30px 0 55px;
+}
+
+.about ul {
+    padding-left: 20px;
+}
+
+.contact .row {
+    margin: 60px 0 90px;
+    justify-content: space-between;
+}
+
+.contact .row .col {
+    padding: 0 10px;
+    width: calc(100% /2 -50px);
+}
+
+.contact .row .col p {
+    margin-bottom: 10px;
+    color: #7a7a7a;
+}
+
+.contact .row .col p i {
+    margin-right: 20px;
+}
+
+.contact form input {
+    /* display:flexbox; */
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    border: 1px solid #bfbfbf;
+    outline: none;
+}
+
+.contact form textarea {
+    padding: 10px;
+    width: 100%;
+    height: 150px;
+    border: 1px solid #bfbfbf;
+    resize: none;
+    outline: none;
+
+}
+
+.contact form button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 15px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    background: #333;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.contact form button:hover {
+    background: #525252;
+}
+
+.footer {
+    background: #333;
+    padding: 20px 0;
+}
+
+.footer span {
+    color: white;
+}
+
+/* .navbar #menu-toggler{
+    display: none ;
+} */
+
+ @media(width < 850px) {
+    /*.navbar .navlinks {
+        position: fixed;
+        top: 65px;
+        height: 100%;
+        display: block;
+        background: rgba(198, 198, 198, 0.5);
+        width: 100px;
+        padding-left: 20px;
+        padding-top: 30px;
+        left: 0;
+        left: -100%;
+        transition: all 0.3s ease;
+    } */
+
+    .navlinks li {
+        font-size: 15px;
+    }
+
+    /* #hamburger-btn{
+        color: white;
+    }
+    #menu-toggler{
+        margin-left: auto;
+    }
+    #menu-toggler:checked ~ .navlinks{
+        left: 0;
+    } */
+    section .cards .card {
+        width: calc(100% / 3 - 10px);
+    }
+
+    .contact .row {
+        flex-direction: column;
+    }
+
+    .contact .row .col:last-child {
+        margin-top: 40px;
+    }
+}
+
+@media(width < 750px) {
+    section .cards .card {
+        width: calc(100% / 2 - 10px);
+    }
+
+    .homepage .text h1 {
+        font-size: 30px;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+@media(width < 575px) {
+    section .cards .card {
+        width:100%;
+    }
+
+    .homepage .text h1 {
+        font-size: 30px;
+    }
+
+    section h2 {
+        font-size: 1.2rem;
+    }
+    
+    .navlinks li {
+        font-size: 13px;
+}
+
+    /* .navbar .navlinks {
+        position: fixed;
+        top: 65px;
+        height: 100%;
+        display: block;
+        background: #333;
+        width: 80px;
+        padding-left: 10px;
+        padding-top: 15px;
+        left: 0;
+        transition: all 0.7s ease;
+    }*/
+
+    } 
+
+     @media(width < 400px) {
+        /*.navbar .navlinks {
+            position: fixed;
+            top: 65px;
+            height: 100%;
+            display: block;
+            background: #333;
+            width: 60px;
+            padding-left: 10px;
+            padding-top: 5px;
+            left: 0;
+            left: -100%;
+            transition: all 0.7s ease;
+        }
+        */
+        .navlinks li {
+            font-size: 10px;
+            margin: auto 1px;
+            padding: auto 1px;
+        }
+    } 
+}
